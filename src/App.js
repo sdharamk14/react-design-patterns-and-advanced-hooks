@@ -1,5 +1,6 @@
 import ClickCounter from "./components/counters/ClickCounter";
 import Greeting from "./components/Greeting";
+import GreetingWithCustomHooks from "./components/GreetingWithCustomHooks";
 import CounterRenderProps from "./components/HOC/CounterRenderProps";
 import PostList from "./components/PostList";
 import UserList from "./components/UserList";
@@ -12,7 +13,9 @@ export default function App() {
       {/* <UserList /> */}
       {/* <PostList /> */}
       {/* React Hook State lazy initialization */}
-      <Greeting initialState="" />
+      {/* <Greeting initialState="" /> */}
+      {/* React Custom Hook  */}
+      <GreetingWithCustomHooks />
     </div>
   );
 }
