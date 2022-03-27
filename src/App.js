@@ -13,6 +13,7 @@ import "./styles.css";
 import React from "react";
 import CounterWithComposition from "./components/composition-resolving-props-drilling/CounterWithComposition";
 import CounterDisplayWithComposition from "./components/composition-resolving-props-drilling/CounterDisplayWithComposition";
+import CompoundComponent from "./components/design-patterns/compound-components/CompoundComponent";
 
 export default function App() {
   const [count, setCount] = React.useState(0);
@@ -38,9 +39,12 @@ export default function App() {
       </CounterContextProvider> */}
 
       {/* React Composition for prop drilling */}
-      <CounterWithComposition setCount={setCount}>
+      {/* <CounterWithComposition setCount={setCount}>
         <CounterDisplayWithComposition count={count} />
-      </CounterWithComposition>
+      </CounterWithComposition> */}
+
+      {/* Compound components design pattern */}
+      <CompoundComponent />
     </div>
   );
 }
