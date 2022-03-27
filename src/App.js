@@ -1,3 +1,7 @@
+import CounterContext from "./components/context-api/CounterContext";
+import CounterContextProvider from "./components/context-api/CounterContextProvider";
+import CounterDisplayWithContext from "./components/context-api/CounterDisplayWithContext";
+import CounterWithContext from "./components/context-api/CounterWithContext";
 import ClickCounter from "./components/counters/ClickCounter";
 import Greeting from "./components/Greeting";
 import GreetingWithCustomHooks from "./components/GreetingWithCustomHooks";
@@ -21,7 +25,13 @@ export default function App() {
       {/* <GreetingWithCustomHooks /> */}
 
       {/* React Hooks Flow */}
-      <Parent />
+      {/* <Parent /> */}
+
+      {/* React Create context hooks */}
+      <CounterContextProvider>
+        <CounterWithContext />
+        <CounterDisplayWithContext />
+      </CounterContextProvider>
     </div>
   );
 }
