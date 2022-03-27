@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const Checkbox = ({ children }) => {
   const [check, setCheck] = useState(false);
-  console.log(check);
   return (
     <>
       <input type="checkbox" value={check} onClick={() => setCheck(!check)} />

@@ -14,6 +14,7 @@ import React from "react";
 import CounterWithComposition from "./components/composition-resolving-props-drilling/CounterWithComposition";
 import CounterDisplayWithComposition from "./components/composition-resolving-props-drilling/CounterDisplayWithComposition";
 import CompoundComponent from "./components/design-patterns/compound-components/CompoundComponent";
+import CompoundComponentWithNestedChildren from "./components/design-patterns/compound-components/CompoundComponentWithNestedChildren";
 
 export default function App() {
   const [count, setCount] = React.useState(0);
@@ -44,7 +45,10 @@ export default function App() {
       </CounterWithComposition> */}
 
       {/* Compound components design pattern */}
-      <CompoundComponent />
+      {/* <CompoundComponent /> */}
+
+      {/* Compound components with nested chidren design pattern */}
+      <CompoundComponentWithNestedChildren />
     </div>
   );
 }
