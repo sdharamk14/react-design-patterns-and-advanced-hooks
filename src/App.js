@@ -10,8 +10,12 @@ import PostList from "./components/PostList";
 import Parent from "./components/react-hooks-flow/parent";
 import UserList from "./components/UserList";
 import "./styles.css";
+import React from "react";
+import CounterWithComposition from "./components/composition-resolving-props-drilling/CounterWithComposition";
+import CounterDisplayWithComposition from "./components/composition-resolving-props-drilling/CounterDisplayWithComposition";
 
 export default function App() {
+  const [count, setCount] = React.useState(0);
   return (
     <div className="App">
       {/* !--HOC with react hooks functional components */}
@@ -28,10 +32,15 @@ export default function App() {
       {/* <Parent /> */}
 
       {/* React Create context hooks */}
-      <CounterContextProvider>
+      {/* <CounterContextProvider>
         <CounterWithContext />
         <CounterDisplayWithContext />
-      </CounterContextProvider>
+      </CounterContextProvider> */}
+
+      {/* React Composition for prop drilling */}
+      <CounterWithComposition setCount={setCount}>
+        <CounterDisplayWithComposition count={count} />
+      </CounterWithComposition>
     </div>
   );
 }
